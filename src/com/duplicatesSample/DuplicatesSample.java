@@ -17,7 +17,7 @@ public class DuplicatesSample {
 		char[] array2 = findDuplicates(array1);
 		printDuplcates(array2);
 	}
-
+//finding duplicates
 	public static char[] findDuplicates(char[] array3) {
 		char[] array2 = new char[10];
 		for (int i = 0; i < array3.length; i++) {
@@ -31,7 +31,7 @@ public class DuplicatesSample {
 		}
 		return array2;
 	}
-
+//printing duplicates
 	public static void printDuplcates(char[] array2) {
 		for (Character element : array2) {
 			if (element == '\0') {
