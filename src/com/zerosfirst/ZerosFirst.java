@@ -1,12 +1,12 @@
-package com.orderzeros;
+package com.zerosfirst;
 
-public class OrderZeros {
+public class ZerosFirst {
 	public static void main(String args[]) {
 		int[] array1 = new int[10];
 		array1[0] = 0;
 		array1[1] = 0;
 		array1[2] = 2;
-		array1[3] = 0;
+		array1[3] = 1;
 		array1[4] = 4;
 		array1[5] = 5;
 		array1[6] = 0;
