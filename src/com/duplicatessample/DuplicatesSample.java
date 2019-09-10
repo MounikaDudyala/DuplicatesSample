@@ -18,18 +18,22 @@ public class DuplicatesSample {
 		array1[8] = 4;
 		array1[9] = 4;
 		Set<Integer> finalSet = findRepeat(array1);
-		printSet(finalSet);
+		printRepeat(finalSet);
 	}
 
 	private static Set<Integer> findRepeat(int[] array1) {
 		Set<Integer> dupset = new HashSet<>();
 		for (int i = 0; i < array1.length; i++) {
-			dupset.add(array1[i]);
+			for (int j = i + 1; j < array1.length; j++) {
+				if (array1[i] == array1[j]) {
+					dupset.add(array1[i]);
+				}
+			}
 		}
 		return dupset;
 	}
 
-	private static void printSet(Set<Integer> finalSet) {
+	private static void printRepeat(Set<Integer> finalSet) {
 		Iterator<Integer> iterator = finalSet.iterator();
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
