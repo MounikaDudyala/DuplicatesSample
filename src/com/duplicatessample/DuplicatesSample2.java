@@ -1,4 +1,9 @@
 package com.duplicatessample;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 public class DuplicatesSample2 {
 	public static void main(String args[]) {
 		char[] array1 = new char[10];
@@ -12,10 +17,12 @@ public class DuplicatesSample2 {
 		array1[7] = 'd';
 		array1[8] = 'r';
 		array1[9] = 'r';
-		findRepeat(array1);
+		Set<Character> finalSet = findRepeat(array1);
+		printRepeat(finalSet);
 	}
 
-	public static void findRepeat(char[] array1) {
+	public static Set<Character> findRepeat(char[] array1) {
+		Set<Character> dupset = new HashSet<>();
 		int dupValue = 0;
 		for (int l = 0; l < array1.length; l++) {
 			int i = array1[l] - 97;
@@ -23,7 +30,14 @@ public class DuplicatesSample2 {
 			if ((j&dupValue)==0) {
 				dupValue = (j | dupValue);
 			} else
-				System.out.println(array1[l]);
+				dupset.add(array1[l]);
+		}
+		return dupset;
+	}
+	private static void printRepeat(Set<Character> finalSet) {
+		Iterator<Character> iterator = finalSet.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
 		}
 	}
 }
