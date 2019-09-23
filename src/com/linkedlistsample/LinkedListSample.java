@@ -7,12 +7,12 @@ public class LinkedListSample {
 	public static void main(String args[]) {
 		LinkedList<Integer> list1 = new LinkedList<>();
 		LinkedList<Integer> list2 = new LinkedList<>();
-		list1.addFirst(5);
-		list1.addFirst(9);
-		list1.addFirst(8);
-		list2.addFirst(2);
-		list2.addFirst(6);
-		list2.addFirst(4);
+		list1.add(3);
+		list1.add(4);
+		list1.add(2);
+		list2.add(4);
+		list2.add(6);
+		list2.add(5);
 		LinkedList<Integer> list3 = findSum(list1, list2);
 		printList(list3);
 	}
