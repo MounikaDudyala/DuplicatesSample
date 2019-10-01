@@ -28,7 +28,7 @@ public class LinkedListSample {
 	}
 
 	/*
-	 * TC:0(n^2),SC:0(n^2) without using stacks fetching through the entire list all
+	 * TC:o(n^2),SC:o(n^2) without using stacks fetching through the entire list all
 	 * the time
 	 */
 	private static LinkedList<Integer> findSum1(LinkedList<Integer> list1, LinkedList<Integer> list2)
@@ -56,7 +56,7 @@ public class LinkedListSample {
 	}
 
 	/*
-	 * TC:0(n),SC:0(n) using two stacks
+	 * TC:o(n),SC:o(n) using two stacks
 	 */
 	private static LinkedList<Integer> findSum2(LinkedList<Integer> list1, LinkedList<Integer> list2)
 			throws NullPointerException {
@@ -94,7 +94,7 @@ public class LinkedListSample {
 	}
 
 	/*
-	 * TC:0(n),SC:0(n) using only one stack
+	 * TC:o(n),SC:o(n) using only one stack
 	 */
 	private static LinkedList<Integer> findSum3(LinkedList<Integer> list1, LinkedList<Integer> list2)
 			throws NullPointerException {
